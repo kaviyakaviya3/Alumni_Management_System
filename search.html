@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alumni Search</title>
+</head>
+
+<body>
+
+<h2>🔍 Alumni Search</h2>
+
+<table border="1">
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Department</th>
+<th>Batch</th>
+</tr>
+
+{% for a in alumni %}
+
+<tr>
+<td>{{a[0]}}</td>
+<td>{{a[1]}}</td>
+<td>{{a[2]}}</td>
+<td>{{a[3]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
+<a href="/student_dashboard" class="btn btn-primary">
+    ⬅ Back to Dashboard
+</a>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Portal</title>
+</head>
+<body>
+
+<h1>💼 Alumni Job Portal</h1>
+
+<a href="/add_job">
+    <button>➕ Post Job</button>
+</a>
+
+<hr>
+
+{% for job in jobs %}
+
+<div style="border:1px solid black; padding:15px; margin:10px; border-radius:8px;">
+
+<h2>{{ job[1] }}</h2>
+
+<b>Role:</b> {{ job[2] }}<br><br>
+
+<b>📍 Location:</b> {{ job[3] }}<br>
+
+<b>💰 Salary:</b> {{ job[4] }}<br>
+
+<b>Description:</b><br>
+{{ job[6] }}<br><br>
+
+<a href="{{ job[5] }}" target="_blank">
+<button>Apply Now</button>
+</a>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>
+<a href="/student_dashboard" class="btn btn-primary">
+    ⬅ Back to Dashboard
+</a>
